@@ -8,7 +8,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 ### Installation
 1. Copy `script.js` contents into your `footer.php` after `</body>`.
 2. Copy `style.css` contents into your css file or plugin.
-3. Copy 1 option from `page.php` for your form code setup - php, or wordpress page shortcode.
+3. Copy one option from `page.php` for your form code setup - php, or wordpress page shortcode.
 
 ### Usage
 1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
