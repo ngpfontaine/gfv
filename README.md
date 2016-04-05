@@ -42,8 +42,10 @@
   
 ### Options
 You can customize some string vars that display to the user. They're at the top of `script.js`, you can guess by their names:
-`var buttonSendingText = 'Sending...';`
-`var validationErrorText = 'Please complete all required fields';`
+```javascript
+var buttonSendingText = 'Sending...';  
+var validationErrorText = 'Please complete all required fields';
+```
 
 ### To-Do
 1. 'Cover button' div and 'validation text' div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
