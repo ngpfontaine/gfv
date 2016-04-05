@@ -1,13 +1,6 @@
 // REQUIRED FORM FIELD ON PAGE CONFIRMATION SCRIPT
 // NGPFONTAINE  20160405
-// (HOW-TO) MAKE SURE TO LINK FA-ICONS STYLESHEET IN <HEAD>
-// (HOW-TO) SCRIPT REQUIRES JQUERY AS WELL
-/*
-* (HOW-TO) TAG ALL REQUIRED FIELDS W/ 'form-req' CLASS UNDER THE GFORM APPEARANCE TAB
-* (HOW-TO) TAG EACH REQUIRED FIELD W/ 'email-req or first-req' SAME AS ABOVE
-* (HOW-TO) ADD A 'COVER' BUTTON WITH #form-button-cover, STYLE, POS. ABSOLUTE, ETC
-* (HOW-TO) .required-field, .required-focus, and .required-border NEED VISUAL STYLES
-*/
+// NICFONTAINE.COM
 
 var coverButton = '#form-button-cover';
 var completeIcon = '<i class="fa fa-check"></i>';
