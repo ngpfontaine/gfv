@@ -38,6 +38,7 @@
 ### Note
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
 - On submit, the button text changes to 'Submitting...'. You can define the text by changing the value of variable `buttonSendingText` near the top of `script.js`.
+- GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
 
 ### To-Do
 1. 'Cover button' div and 'validation text' div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
