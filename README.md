@@ -3,7 +3,7 @@
 The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
 ### Prerequisites
 1. JQuery (I assume you're using wordpress so you should be good).
-2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`
+2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`.
 
 ### Installation
 1. Copy `script.js` contents into your `footer.php` after `</body>`.
@@ -21,15 +21,15 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
   `email-req`  
   `question-req`  
   
-    **Example**: First Name field will have `form-req first-req` in the **Custom CSS Class** option.
+    **Example**: First-Name field will have `form-req first-req` in the **Custom CSS Class** option.
   
-4. Save, and add form to page
+4. Save, and add form to page.
 
 ### Note
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
 
 ### To-Do
-1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV
+1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
 
 ### Credits
 TODO: Write credits
