@@ -3,9 +3,11 @@
 The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
 
 ### What it Do?
+  
 ##### [Original with refresh]
 ![Original Form](https://nicfontaine.com/images/web_form_validation_gif_02.gif)
 
+  
 ##### [On-Page Validation]
 ![GFV](https://nicfontaine.com/images/web_form_validation_gif_01.gif)
   
