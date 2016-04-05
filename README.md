@@ -18,7 +18,8 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
   `last-req`  
   `email-req`  
   `question-req`  
-Example: First Name field will have `form-req first-req` in the **Custom CSS Class** option.
+**Example**: First Name field will have `form-req first-req` in the **Custom CSS Class** option.
+  
 4. Save form and add it to either a Wordpress page via **shortcode** or a php file, and include the two divs in the page.php.
 5. Run it.
 
