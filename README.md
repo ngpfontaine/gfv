@@ -16,6 +16,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 2. Each field you want GFV to validate needs `form-req` in the **Custom CSS Class** field under the **Appearance** tab.
   
 3. To validate each individual field using logic also add a class from below:  
+  
   `first-req`  
   `last-req`  
   `email-req`  
