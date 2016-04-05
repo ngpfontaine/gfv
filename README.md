@@ -27,7 +27,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 
 ### Note
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
-- On submit, the button text changes to 'Submitting...'. You can define the text by changing the value of var `buttonSendingText`.
+- On submit, the button text changes to 'Submitting...'. You can define the text by changing the value of variable `buttonSendingText` near the top of `script.js`.
 
 ### To-Do
 1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
