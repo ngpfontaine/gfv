@@ -4,9 +4,9 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 
 ### What it Do?
   
-| *Original with refresh* | *On-Page Validation* |
+| Original with refresh | On-Page Validation |
 | --- | --- |
-| ![Original Form](https://nicfontaine.com/images/web_form_validation_gif_02.gif) | ![GFV](https://nicfontaine.com/images/web_form_validation_gif_01.gif) |
+|   ![Original Form](https://nicfontaine.com/images/web_form_validation_gif_02.gif)   |     ![GFV](https://nicfontaine.com/images/web_form_validation_gif_01.gif)   |
   
 ### Prerequisites
 1. JQuery (I assume you're using wordpress so you should be good).
