@@ -32,7 +32,9 @@
     **Example**: *First-Name* field will have `form-req first-req` in the **Custom CSS Class** option.
   
 4. Save, and add form to page.
-
+  
+---
+  
 ### Note
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
 - On submit, the button text changes to 'Submitting...'. You can define the text by changing the value of variable `buttonSendingText` near the top of `script.js`.
