@@ -8,6 +8,7 @@ var completeSpinner = '<i class="fa fa-spinner"></i>';
 var formAfterContent = '<div id="form-button-cover">SUBMIT</div><div id="form-confirmation"></div>';
 
 var buttonSendingText = 'Sending...';
+var confirmationText = 'Please complete all required fields';
 
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.form-req';
@@ -141,7 +142,7 @@ function isValidEmailAddress(emailAddress) {
 
 // ON BUTTON COVER CLICK, DISPLAY ERROR
 $(coverButton).click(function() {
-  document.getElementById('form-confirmation').innerHTML = "Please complete all required fields";
+  document.getElementById('form-confirmation').innerHTML = confirmationText;
   // ADD RED BORDER TO BLANK FIELDS
   $('.required-field').addClass('required-border required-pulse');
   var timerPulse = setTimeout(function() {
