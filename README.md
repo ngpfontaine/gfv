@@ -1,6 +1,10 @@
 
 # On-Page Required Validation for Gravity Forms
 The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
+
+### What it Do?
+(https://nicfontaine.com/images/web_form_validation_gif_02.gif)
+  
 ### Prerequisites
 1. JQuery (I assume you're using wordpress so you should be good).
 2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`.
