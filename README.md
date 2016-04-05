@@ -13,7 +13,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 ### Usage
 1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
   
-2. Each required field you want GFV to act on needs `form-req` in the **Custom CSS Class** field under the **Appearance** tab.
+2. Each field you want GFV to validate needs `form-req` in the **Custom CSS Class** field under the **Appearance** tab.
   
 3. To validate each individual field using logic also add a class from below:  
   `first-req`  
