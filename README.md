@@ -1,5 +1,5 @@
 
-# On-Page Required Validation for Gravity Forms  
+# Gravity Forms Validation 
   
     
 The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
