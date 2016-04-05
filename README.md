@@ -36,7 +36,11 @@
 ---
   
 ### Note
-- You may need to edit the css of the cover button ```html #form-button-cover``` to fit over the gravity forms button, and style as you please to fit with your site design.
+- You may need to edit the css of the cover button 
+```html
+#form-button-cover
+``` 
+to fit over the gravity forms button, and style as you please to fit with your site design.
   
 - GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
   
