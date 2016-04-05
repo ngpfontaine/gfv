@@ -30,7 +30,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 - On submit, the button text changes to 'Submitting...'. You can define the text by changing the value of variable `buttonSendingText` near the top of `script.js`.
 
 ### To-Do
-1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
+1. 'Cover button' div and 'validation text' div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
 
 ### License
 Use it, break it, complain, wtvr.
