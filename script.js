@@ -12,6 +12,7 @@
 var coverButton = '#form-button-cover';
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
+var formAfterContent = '<div id="form-button-cover">SUBMIT</div><div id="form-confirmation"></div>';
 
 var buttonSendingText = 'Sending...';
 
@@ -30,6 +31,14 @@ document.getElementById('form-button-cover').innerHTML = document.getElementById
 var buttonTextCache = document.getElementById('gform_submit_button_1').value;
 
 (function($) {
+
+
+// ADD COVER BUTTON AND CONFIRMATION DIV AFTER GRAVITY FORMS DIV
+$(formAfterContent).insertAfter('#gform_wrapper_1');
+
+// MAKE BUTTON COVER COPY SAME AS G FORM COPY
+document.getElementById('form-button-cover').innerHTML = document.getElementById('gform_submit_button_1').value;
+var buttonTextCache = document.getElementById('gform_submit_button_1').value;
 
 $(fieldReqAll).addClass('required-field');
 
