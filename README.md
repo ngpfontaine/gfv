@@ -57,7 +57,7 @@ var validationErrorText = 'Please complete all required fields';
 
 ### More
 Check out my website at [nicfontaine.com](https://nicfontaine.com)  
-Twitter: [\@arcovelo])(https://twitter.com/ArcoVelo)
+Twitter: [arcovelo])(https://twitter.com/ArcoVelo)
 
 ### License
 Use it, break it, complain, wtvr.
