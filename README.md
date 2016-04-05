@@ -4,6 +4,8 @@
     
 On form submit the page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI. Currently supports **single-line**, **paragraph**, and **email** fields only.
   
+>I use this all the time at work and thought I'd put it up in case anyone else wants to implement it or just mess around.
+  
   
 ### What?
   
