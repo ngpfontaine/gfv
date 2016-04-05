@@ -13,7 +13,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
   
 ### Prerequisites
 1. [JQuery](https://developers.google.com/speed/libraries/#jquery), if it's not included in your theme already.
-2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`.
+2. [Font Awesome Icons](http://fontawesome.io/get-started/).
 
 ### Installation
 1. Copy `script.js` contents into your `footer.php` after `</body>`.
