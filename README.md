@@ -55,5 +55,9 @@ var validationErrorText = 'Please complete all required fields';
 1. 'Cover button' div and 'validation text' div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
 2. Add support for other inputs like **number** , **checkbox**, as well as **select**
 
+### More
+Check out my website at [nicfontaine.com](https://nicfontaine.com)
+Twitter: [@arcovelo])(https://twitter.com/ArcoVelo)
+
 ### License
 Use it, break it, complain, wtvr.
