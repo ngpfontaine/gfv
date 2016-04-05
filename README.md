@@ -21,7 +21,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
   `email-req`  
   `question-req`  
   
-    **Example**: First-Name field will have `form-req first-req` in the **Custom CSS Class** option.
+    **Example**: *First-Name* field will have `form-req first-req` in the **Custom CSS Class** option.
   
 4. Save, and add form to page.
 
