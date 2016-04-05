@@ -4,7 +4,7 @@
 
 // VARS FOR CUSTOMIZING TEXT CONTENT
 var buttonSendingText = 'Sending...';
-var confirmationText = 'Please complete all required fields';
+var validationErrorText = 'Please complete all required fields';
 
 var coverButton = '#form-button-cover';
 var completeIcon = '<i class="fa fa-check"></i>';
@@ -143,7 +143,7 @@ function isValidEmailAddress(emailAddress) {
 
 // ON BUTTON COVER CLICK, DISPLAY ERROR
 $(coverButton).click(function() {
-  document.getElementById('form-confirmation').innerHTML = confirmationText;
+  document.getElementById('form-confirmation').innerHTML = validationErrorText;
   // ADD RED BORDER TO BLANK FIELDS
   $('.required-field').addClass('required-border required-pulse');
   var timerPulse = setTimeout(function() {
