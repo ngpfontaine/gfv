@@ -1,0 +1,97 @@
+/* CSS FOR INLINE JQUERY VALIDATION FOR G FORMS */
+
+.form-req input, .form-req textarea, .form-req select {
+  border: 1px solid #bdbdbd;
+}
+
+.form-req .required-border {
+  border: 1px solid #eaaeae;
+  background: #fbf0f0;
+}
+
+.required-focus {
+  /*border: 1px solid #aaa;*/
+  box-shadow: inset 0 0 3px #ddd;
+}
+
+#form-confirmation {
+  text-align: center;
+  color: #de5c5c;
+  padding-right: 20px;
+  height: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin: 0;
+}
+
+#form-button-cover {
+  background: #aaa;
+  position: absolute;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  width: 264.3px;
+  margin-top: -47.2px;
+  cursor: pointer;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+#gform_submit_button_1:focus, #gform_submit_button_1:active  {
+	outline: none !important;
+	outline: 0 !important;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+#gform_submit_button_1:focus {
+	border: 1px solid #b17b2b;
+	padding: 8px 0 !important;
+}
+
+.fa-spinner {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 4px;
+  color: #ccc;
+  animation-name: animSpinner;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animSpinner {
+  0% {transform: scale(0.6,0.6);}
+  10% {transform: rotate(0deg);}
+  90% {transform: rotate(324deg);}
+  100% {transform: rotate(360deg); transform: scale(0.6,0.6);}
+}
+
+.fa-check {
+  color: #65a86f;
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 4px;
+  animation-name: animCheck;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animCheck {
+  0% {transform: scale(0.1,0.1); opacity: 0;}
+  60% {transform: scale(1.6,1.6); opacity: 0.6;}
+  100% {transform: scale(1,1); opacity: 1;}
+}
+
+@keyframes requiredPulse {
+  0% {border: 1px solid #eaaeae;}
+  40% {border: 1px solid #cf4c4c;}
+  100% {border: 1px solid #eaaeae;}
+}
+
+.form-req .required-pulse {
+  animation-name: requiredPulse;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
