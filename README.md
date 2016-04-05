@@ -8,7 +8,6 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 ### Installation
 1. Copy `script.js` contents into your `footer.php` after `</body>`.
 2. Copy `style.css` contents into your css file or plugin.
-3. Copy one option from `page.php` for your form code setup - php, or wordpress page shortcode.
 
 ### Usage
 1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
@@ -24,7 +23,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
   
     **Example**: First Name field will have `form-req first-req` in the **Custom CSS Class** option.
   
-4. Save form and add it to either a Wordpress page via **shortcode** or a php file, and include the two divs in the page.php.
+4. Save, and add form to page
 
 ### Note
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
