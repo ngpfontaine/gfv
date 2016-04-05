@@ -1,11 +1,23 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
-TODO: Write a project description
+
+# On Page Gravity Forms Required Validation with JQuery
+The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
+## Prerequisites
+1. JQuery (I assume you're using wordpress so you should be good)
+2. Font Awesome Icons
 ## Installation
-TODO: Describe the installation process
+1. copy script.js contents into your footer.php after </body>
+2. copy style.css contents into your css file or plugin
+3. page.php shows 2 options for your form code setup - php, or wordpress page
 ## Usage
-TODO: Write usage instructions
+- Create form fields as either Single-Line Text (names, email) or Paragraph Text (questions).
+- Under the 'Appearance' tab each required field you want GFV to act on needs `form-req` in the 'Custom CSS Class' field.
+- To validate each individual field using logic also add a class from below:
+  `first-req`
+  `last-req`
+  `email-req`
+  `question-req`
+- Save form and add it to either a Wordpress page or a php file, and include the two divs in the page.php.
+- Run it.
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -18,6 +30,3 @@ TODO: Write history
 TODO: Write credits
 ## License
 TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
