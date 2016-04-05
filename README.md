@@ -3,7 +3,7 @@
 The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
 ### Prerequisites
 1. JQuery (I assume you're using wordpress so you should be good).
-2. [Font Awesome Icons](http://fontawesome.io/).
+2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`
 
 ### Installation
 1. Copy `script.js` contents into your `footer.php` after `</body>`.
