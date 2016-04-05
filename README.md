@@ -12,7 +12,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 |   ![Original Form](https://nicfontaine.com/images/web_form_validation_gif_02.gif)   |     ![GFV](https://nicfontaine.com/images/web_form_validation_gif_01.gif)   |
   
 ### Prerequisites
-1. JQuery (I assume you're using wordpress so you should be good).
+1. [JQuery](https://developers.google.com/speed/libraries/#jquery), if it's not in your theme
 2. [Font Awesome Icons](http://fontawesome.io/) linked within `<head>`.
 
 ### Installation
