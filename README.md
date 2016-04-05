@@ -2,7 +2,7 @@
 # Gravity Forms Validation 
   
     
-The page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI.
+On form submit the page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI. Currently supports **single-line**, **paragraph**, and **email** fields only.
   
   
 ### What?
