@@ -5,10 +5,12 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 ### What it Do?
   
 [*Original with refresh*]  
+  
 ![Original Form](https://nicfontaine.com/images/web_form_validation_gif_02.gif)
 
   
 [*On-Page Validation*]  
+  
 ![GFV](https://nicfontaine.com/images/web_form_validation_gif_01.gif)
   
 ### Prerequisites
