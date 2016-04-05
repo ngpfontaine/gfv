@@ -32,4 +32,4 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
 
 ### License
-Use it, break it, wtvr.
+Use it, break it, complain, wtvr.
