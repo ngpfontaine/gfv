@@ -29,7 +29,7 @@ The page reload is ugly, slow by nature, and confusing on mobile. This is my sol
 - You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
 
 ### To-Do
-1. Need to add `page.php` contents w/ JS after gravity forms' button, so you don't need to paste it in.
+1. Cover button and validation text div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere
 
 ### Credits
 TODO: Write credits
