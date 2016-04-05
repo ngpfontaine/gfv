@@ -2,13 +2,14 @@
 // NGPFONTAINE  20160405
 // NICFONTAINE.COM
 
+// VARS FOR CUSTOMIZING TEXT CONTENT
+var buttonSendingText = 'Sending...';
+var confirmationText = 'Please complete all required fields';
+
 var coverButton = '#form-button-cover';
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
 var formAfterContent = '<div id="form-button-cover">SUBMIT</div><div id="form-confirmation"></div>';
-
-var buttonSendingText = 'Sending...';
-var confirmationText = 'Please complete all required fields';
 
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.form-req';
