@@ -56,7 +56,7 @@ var validationErrorText = 'Please complete all required fields';
 2. Add support for other inputs like **number** , **checkbox**, as well as **select**
 
 ### More
-Check out my website at [nicfontaine.com](https://nicfontaine.com)
+Check out my website at [nicfontaine.com](https://nicfontaine.com)  
 Twitter: [@arcovelo])(https://twitter.com/ArcoVelo)
 
 ### License
