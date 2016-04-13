@@ -39,7 +39,7 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 ---
   
 ### Note
-- You may need to edit the css of the cover button `#form-button-cover` to fit over the gravity forms button, and style as you please to fit with your site design.
+- `#form-button-cover` covers and disables Gravity Forms' button. You will need to edit it's css to fit with the page.
   
 - GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
   
