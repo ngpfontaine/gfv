@@ -24,14 +24,14 @@ var fieldLastReq = '.last-req';
 
 var gFormButtonDom = document.getElementById('gform_submit_button_1');
 
-// MAKE BUTTON COVER COPY SAME AS G FORM COPY
-document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
-var buttonTextCache = gFormButtonDom.value;
-
 (function($) {
 
 // ADD COVER BUTTON AND CONFIRMATION DIV AFTER GRAVITY FORMS DIV
 $(formAfterContent).insertAfter('#gform_wrapper_1');
+
+// MAKE BUTTON COVER COPY SAME AS G FORM COPY
+document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
+var buttonTextCache = gFormButtonDom.value;
 
 // MAKE BUTTON COVER COPY SAME AS G FORM COPY
 document.getElementById('form-button-cover').innerHTML = document.getElementById('gform_submit_button_1').value;
