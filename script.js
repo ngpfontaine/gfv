@@ -18,6 +18,7 @@ var fieldReqAll = '.form-req input';
 // CLASS NAMES FOR EACH REQUIRED FIELD
 var fieldQuestionReq = '.question-req';
 var fieldEmailReq = '.email-req';
+var fieldNameReq = '.name-req';
 var fieldFirstReq = '.first-req';
 var fieldLastReq = '.last-req';
 
@@ -49,7 +50,7 @@ $(fieldReqAll).focus(function() {
 // RUN ON FIELD WHEN TYPING - TAKES INTO ACCOUNT AUTOFILL DROPDOWN SELECTION CLICKS
 $(fieldReqAll).on('keyup keydown input change', function() {
   // IF FIELD PARENT LI HAS CLASS OF (question-req || first-req || last-req)
-  if ( $(this).parents(fieldQuestionReq).length || $(this).parents(fieldFirstReq).length || $(this).parents(fieldLastReq).length ) {
+  if ( $(this).parents(fieldQuestionReq).length || $(this).parents(fieldNameReq).length || $(this).parents(fieldLastReq).length || $(this).parents(fieldFirstReq).length ) {
     // CHECK IF LENGTH IS LONGER THAN 0 && NOT JUST SPACES
     if ( $(this).val().length > 0 && $.trim($(this).val()) !== '' ) {
       $(this).removeClass('required-field required-focus required-border');
