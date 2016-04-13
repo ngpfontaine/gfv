@@ -47,7 +47,7 @@ input::-moz-focus-inner {
 }
 
 #gform_submit_button_1:focus {
-	border: 1px solid #b17b2b;
+	border: 1px solid #666;
 	padding: 8px 0 !important;
 }
 

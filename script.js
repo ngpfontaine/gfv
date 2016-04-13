@@ -14,26 +14,27 @@ var formAfterContent = '<div id="form-button-cover">SUBMIT</div><div id="form-co
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.form-req';
 // FIELD UNDER REQUIRED <li>
-var fieldReqAll = '.form-req div >';
+var fieldReqAll = '.form-req input';
 // CLASS NAMES FOR EACH REQUIRED FIELD
 var fieldQuestionReq = '.question-req';
 var fieldEmailReq = '.email-req';
 var fieldFirstReq = '.first-req';
 var fieldLastReq = '.last-req';
 
+var gFormButtonDom = document.getElementById('gform_submit_button_1');
+
 // MAKE BUTTON COVER COPY SAME AS G FORM COPY
-document.getElementById('form-button-cover').innerHTML = document.getElementById('gform_submit_button_1').value;
-var buttonTextCache = document.getElementById('gform_submit_button_1').value;
+document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
+var buttonTextCache = gFormButtonDom.value;
 
 (function($) {
-
 
 // ADD COVER BUTTON AND CONFIRMATION DIV AFTER GRAVITY FORMS DIV
 $(formAfterContent).insertAfter('#gform_wrapper_1');
 
 // MAKE BUTTON COVER COPY SAME AS G FORM COPY
 document.getElementById('form-button-cover').innerHTML = document.getElementById('gform_submit_button_1').value;
-var buttonTextCache = document.getElementById('gform_submit_button_1').value;
+var buttonTextCache = gFormButtonDom.value;
 
 $(fieldReqAll).addClass('required-field');
 
