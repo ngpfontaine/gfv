@@ -28,12 +28,11 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   
 3. To validate each individual field using logic also add a class from below:  
   
-  `first-req`  
-  `last-req`  
+  `name-req`
   `email-req`  
-  `question-req`  
+  `question-req` 
   
-    **Example**: *First-Name* field will have `form-req first-req` in the **Custom CSS Class** option.
+    **Example**: *First-Name* field will have `form-req name-req` in the **Custom CSS Class** option.
   
 4. Save, and add form to page.
   
