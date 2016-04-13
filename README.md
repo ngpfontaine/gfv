@@ -28,7 +28,7 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   
 3. To validate each individual field using logic also add a class from below:  
   
-  `name-req`
+  `name-req`  
   `email-req`  
   `question-req` 
   
