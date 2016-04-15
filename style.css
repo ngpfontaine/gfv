@@ -2,6 +2,18 @@
 /* NGPFONTAINE  20160415 */
 /* NICFONTAINE.COM */
 
+#form-confirmation {
+  text-align: center;
+  color: #de5c5c;
+  padding-right: 20px;
+  height: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin: 0;
+}
+
+/* --- */
+
 .gfv-req input, .gfv-req textarea, .gfv-req select {
   border: 1px solid #bdbdbd;
 }
@@ -14,16 +26,6 @@
 .required-focus {
   /*border: 1px solid #aaa;*/
   box-shadow: inset 0 0 3px #ddd;
-}
-
-#form-confirmation {
-  text-align: center;
-  color: #de5c5c;
-  padding-right: 20px;
-  height: 18px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  margin: 0;
 }
 
 /*#gform_submit_button_1:focus, #gform_submit_button_1:active  {
