@@ -53,7 +53,7 @@ var validationErrorText = 'Please complete all required fields';
 
 ### To-Do
 1. Add support for other inputs like **number** , **checkbox**, as well as **select**
-2. Need to code last of `gfv-req` to enable button while focused, instead of on blur. Currently it works well only when the email field is last, if not the user must leave the field to enable the button (no bueno).
+2. Need to code last of `gfv-req` to enable button while focused, instead of on blur. Currently it works well only when the email field is last. If not, the user must leave the field to enable the button (no bueno). It works now b/c Email is validated when regex criteria is met - name fields wait till blur so it doesn't seem to validate while the user is typing (it's only looking for one character).
 
 ### More
 Check out my website at [nicfontaine.com](https://nicfontaine.com)  
