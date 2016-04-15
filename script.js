@@ -12,6 +12,8 @@ var formAfterContent = '<div id="form-confirmation"></div>';
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
 
+var sendEnabled = false;
+
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.form-req';
 // FIELD UNDER REQUIRED <li>
@@ -114,10 +116,10 @@ $(fieldReqAll).on('blur', function() {
   }
   // IF EMAIL FIELD IS EDITED/CHANGED, INVALIDATE
   else if ( $(this).parents(fieldEmailReq).length ) {
-      if ( !isValidEmailAddress($(this).val()) ) {
+    if ( !isValidEmailAddress($(this).val()) ) {
       $(this).addClass('required-field required-focus required-border');
       $(this).parent().removeClass('completed-field');
-      }
+    }
   }
 });
 

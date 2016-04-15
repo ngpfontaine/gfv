@@ -24,19 +24,6 @@
   margin: 0;
 }
 
-#form-button-cover {
-  background: #aaa;
-  position: absolute;
-  padding: 10px 0;
-  text-align: center;
-  color: #fff;
-  width: 264.3px;
-  margin-top: -47.2px;
-  cursor: pointer;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
 #gform_submit_button_1:focus, #gform_submit_button_1:active  {
 	outline: none !important;
 	outline: 0 !important;
@@ -94,8 +81,4 @@ input::-moz-focus-inner {
   animation-name: requiredPulse;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
-}
-
-@media (max-width: 480) {
-	#form-button-cover { max-width: 322px; right: 0; left: 0; margin-right: auto; margin-left: auto; width: 100%; margin-top: -47.2px; }
 }
