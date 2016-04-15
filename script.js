@@ -79,6 +79,7 @@ $(fieldReqAll).on('keyup keydown input change', function() {
       $(this).siblings('i').remove();
       // (NOTE) I THINK THIS SHOULD GO HERE?
       sendEnabled = false;
+      $(gFormButtonDom).removeClass('gfv-button-valid');
     }
   }
 
@@ -94,6 +95,7 @@ $(fieldReqAll).on('keyup change', function() {
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
     sendEnabled = false;
+    $(gFormButtonDom).removeClass('gfv-button-valid');
   }
 });
 
@@ -106,6 +108,7 @@ $(fieldReqAll).on('blur', function() {
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
     sendEnabled = false;
+    $(gFormButtonDom).removeClass('gfv-button-valid');
   }
   // IF EMAIL FIELD IS EDITED/CHANGED, INVALIDATE
   else if ( $(this).parents(fieldEmailReq).length ) {
@@ -113,6 +116,7 @@ $(fieldReqAll).on('blur', function() {
       $(this).addClass('required-field required-focus required-border');
       $(this).parent().removeClass('completed-field');
       sendEnabled = false;
+      $(gFormButtonDom).removeClass('gfv-button-valid');
     }
   }
 });
@@ -166,6 +170,8 @@ function buttonEnable() {
   if ( !$(fieldReqAll).hasClass('required-field') ) {
     sendEnabled = true;
     document.getElementById('gfv-error-text').innerHTML = "";
+    // ADD VALID CLASS TO BUTTON
+    $(gFormButtonDom).addClass('gfv-button-valid');
   }
 }
 
