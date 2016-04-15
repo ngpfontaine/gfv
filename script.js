@@ -7,9 +7,10 @@ var buttonSendingText = 'Sending...';
 var validationErrorText = 'Please complete all required fields';
 
 var coverButton = '#form-button-cover';
+var formAfterContent = '<div id="form-confirmation"></div>';
+
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
-var formAfterContent = '<div id="form-button-cover">SUBMIT</div><div id="form-confirmation"></div>';
 
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.form-req';
@@ -23,6 +24,7 @@ var fieldFirstReq = '.first-req';
 var fieldLastReq = '.last-req';
 
 var gFormButtonDom = document.getElementById('gform_submit_button_1');
+var buttonTextCache = gFormButtonDom.value;
 
 (function($) {
 
@@ -30,11 +32,7 @@ var gFormButtonDom = document.getElementById('gform_submit_button_1');
 $(formAfterContent).insertAfter('#gform_wrapper_1');
 
 // MAKE BUTTON COVER COPY SAME AS G FORM COPY
-document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
-var buttonTextCache = gFormButtonDom.value;
-
-// MAKE BUTTON COVER COPY SAME AS G FORM COPY
-document.getElementById('form-button-cover').innerHTML = document.getElementById('gform_submit_button_1').value;
+// document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
 var buttonTextCache = gFormButtonDom.value;
 
 $(fieldReqAll).addClass('required-field');
@@ -80,7 +78,7 @@ $(fieldReqAll).on('keyup keydown input change', function() {
       buttonEnable();
     } else {
       $(this).addClass('required-field required-focus');
-      $(coverButton).show();
+      // $(coverButton).show();
       // REMOVE COMPLETE CHECK
       $(this).parent().removeClass('completed-field');
       $(this).siblings('i').remove();
@@ -97,7 +95,7 @@ $(fieldReqAll).on('keyup change', function() {
     $(this).removeClass('required-focus');
 
     $(this).parent().removeClass('completed-field');
-    $(coverButton).show();
+    // $(coverButton).show();
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
@@ -109,7 +107,7 @@ $(fieldReqAll).on('blur', function() {
   if ( $(this).val().length === 0) {
     $(this).addClass('required-field required-border');
     $(this).parent().removeClass('completed-field');
-    $(coverButton).show();
+    // $(coverButton).show();
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
@@ -153,13 +151,35 @@ $(coverButton).click(function() {
   }, 300);
 });
 
+// DISABLE/ENABLE BUTTON SUBMIT
+gFormButtonDom.addEventListener('click', function(e) {
+
+	if (!sendEnabled) {
+  	e.preventDefault();
+	  document.getElementById('form-confirmation').innerHTML = validationErrorText;
+
+    $('.required-field').addClass('required-border required-pulse');
+
+    var timerPulse = setTimeout(function() {
+      $('.required-field').removeClass('required-pulse');
+    }, 300);
+	}
+	else {
+	  document.getElementById('gform_1').submit();
+		// CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
+    document.getElementById('gform_submit_button_1').value = 'Sending...';
+	}
+
+});
+
 // (NOTE) BUTTON FOCUS NEEDS CLASS
 
 // RUN FUNCTION TO HIDE coverButton
 function buttonEnable() {
   // ONLY IF FIELDS ARE VALIDATED
   if ( !$(fieldReqAll).hasClass('required-field') ) {
-    $(coverButton).hide();
+    sendEnabled = true;
+    // $(coverButton).hide();
     document.getElementById('form-confirmation').innerHTML = "";
   }
 }
