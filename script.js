@@ -189,7 +189,7 @@ function buttonEnable() {
 // });
 
 // CHANGE BACK ON BLUR
-$('[id*="gform_submit_button"]').blur(function() {
+$(gFormButtonDom).blur(function() {
   document.getElementById('gform_submit_button_1').value = buttonTextCache;
 });
 
