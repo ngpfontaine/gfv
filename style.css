@@ -26,19 +26,19 @@
   margin: 0;
 }
 
-#gform_submit_button_1:focus, #gform_submit_button_1:active  {
+/*#gform_submit_button_1:focus, #gform_submit_button_1:active  {
 	outline: none !important;
 	outline: 0 !important;
-}
+}*/
 
 input::-moz-focus-inner {
   border: 0;
 }
 
-#gform_submit_button_1:focus {
+/*#gform_submit_button_1:focus {
 	border: 1px solid #666;
 	padding: 8px 0 !important;
-}
+}*/
 
 .fa-spinner {
   position: absolute;
