@@ -50,6 +50,7 @@ var validationErrorText = 'Please complete all required fields';
 ### Note
   
 - GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
+- Currently, I recommend using an email field last - Read "To-Do 2" below.
 
 ### To-Do
 1. Add support for other inputs like **number** , **checkbox**, as well as **select**
