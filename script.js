@@ -1,41 +1,35 @@
-// REQUIRED FORM FIELD ON PAGE CONFIRMATION SCRIPT
-// NGPFONTAINE  20160405
+// GFV JS - REQUIRED FORM FIELD ON PAGE CONFIRMATION SCRIPT
+// NGPFONTAINE  20160415
 // NICFONTAINE.COM
 
 // VARS FOR CUSTOMIZING TEXT CONTENT
 var buttonSendingText = 'Sending...';
 var validationErrorText = 'Please complete all required fields';
 
-var coverButton = '#form-button-cover';
-var formAfterContent = '<div id="form-confirmation"></div>';
+/* ---- */
 
+var formAfterContent = '<div id="form-confirmation"></div>';
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
-
 var sendEnabled = false;
 
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
-var liReq = '.form-req';
-// FIELD UNDER REQUIRED <li>
-var fieldReqAll = '.form-req input';
+var liReq = '.gfv-req';
+// FIELD UNDER REQUIRED UNDER <li>
+var fieldReqAll = '.gfv-req input';
 // CLASS NAMES FOR EACH REQUIRED FIELD
-var fieldQuestionReq = '.question-req';
-var fieldEmailReq = '.email-req';
-var fieldNameReq = '.name-req';
-var fieldFirstReq = '.first-req';
-var fieldLastReq = '.last-req';
-
-var gFormButtonDom = document.getElementById('gform_submit_button_1');
-var buttonTextCache = gFormButtonDom.value;
+var fieldQuestionReq = '.gfv-question';
+var fieldEmailReq = '.gfv-email';
+var fieldNameReq = '.gfv-name';
 
 (function($) {
 
-// ADD COVER BUTTON AND CONFIRMATION DIV AFTER GRAVITY FORMS DIV
-$(formAfterContent).insertAfter('#gform_wrapper_1');
+// CACHE ANY GRAVITY FORM BUTTON NUMBER BY ID
+var gFormButtonDom = $('[id*="gform_submit_button"]');
+var buttonTextCache = $(gFormButtonDom).val();
 
-// MAKE BUTTON COVER COPY SAME AS G FORM COPY
-// document.getElementById('form-button-cover').innerHTML = gFormButtonDom.value;
-var buttonTextCache = gFormButtonDom.value;
+// ADD CONFIRMATION DIV AFTER ANY GRAVITY FORMS WRAPPER
+$(formAfterContent).insertAfter($('[id*="gform_wrapper"]'));
 
 $(fieldReqAll).addClass('required-field');
 
@@ -50,7 +44,7 @@ $(fieldReqAll).focus(function() {
 // RUN ON FIELD WHEN TYPING - TAKES INTO ACCOUNT AUTOFILL DROPDOWN SELECTION CLICKS
 $(fieldReqAll).on('keyup keydown input change', function() {
   // IF FIELD PARENT LI HAS CLASS OF (question-req || first-req || last-req)
-  if ( $(this).parents(fieldQuestionReq).length || $(this).parents(fieldNameReq).length || $(this).parents(fieldLastReq).length || $(this).parents(fieldFirstReq).length ) {
+  if ( $(this).parents(fieldQuestionReq).length || $(this).parents(fieldNameReq).length ) {
     // CHECK IF LENGTH IS LONGER THAN 0 && NOT JUST SPACES
     if ( $(this).val().length > 0 && $.trim($(this).val()) !== '' ) {
       $(this).removeClass('required-field required-focus required-border');
@@ -101,6 +95,7 @@ $(fieldReqAll).on('keyup change', function() {
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
+    sendEnabled = false;
   }
 });
 
@@ -113,12 +108,14 @@ $(fieldReqAll).on('blur', function() {
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
+    sendEnabled = false;
   }
   // IF EMAIL FIELD IS EDITED/CHANGED, INVALIDATE
   else if ( $(this).parents(fieldEmailReq).length ) {
     if ( !isValidEmailAddress($(this).val()) ) {
       $(this).addClass('required-field required-focus required-border');
       $(this).parent().removeClass('completed-field');
+      sendEnabled = false;
     }
   }
 });
@@ -144,19 +141,19 @@ function isValidEmailAddress(emailAddress) {
 };
 
 // ON BUTTON COVER CLICK, DISPLAY ERROR
-$(coverButton).click(function() {
-  document.getElementById('form-confirmation').innerHTML = validationErrorText;
-  // ADD RED BORDER TO BLANK FIELDS
-  $('.required-field').addClass('required-border required-pulse');
-  var timerPulse = setTimeout(function() {
-    $('.required-field').removeClass('required-pulse');
-  }, 300);
-});
+// $(coverButton).click(function() {
+//   document.getElementById('form-confirmation').innerHTML = validationErrorText;
+//   // ADD RED BORDER TO BLANK FIELDS
+//   $('.required-field').addClass('required-border required-pulse');
+//   var timerPulse = setTimeout(function() {
+//     $('.required-field').removeClass('required-pulse');
+//   }, 300);
+// });
 
 // DISABLE/ENABLE BUTTON SUBMIT
-gFormButtonDom.addEventListener('click', function(e) {
+$(gFormButtonDom).on('click', function(e) {
 
-	if (!sendEnabled) {
+	if (!sendEnabled && $(fieldReqAll).hasClass('required-field')) {
   	e.preventDefault();
 	  document.getElementById('form-confirmation').innerHTML = validationErrorText;
 
@@ -169,14 +166,14 @@ gFormButtonDom.addEventListener('click', function(e) {
 	else {
 	  document.getElementById('gform_1').submit();
 		// CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
-    document.getElementById('gform_submit_button_1').value = 'Sending...';
+    gFormButtonDom.value = buttonSendingText;
 	}
 
 });
 
 // (NOTE) BUTTON FOCUS NEEDS CLASS
 
-// RUN FUNCTION TO HIDE coverButton
+// RUN FUNCTION TO CHANGE sendEnabled, & REMOVE INSTRUCTION TEXT
 function buttonEnable() {
   // ONLY IF FIELDS ARE VALIDATED
   if ( !$(fieldReqAll).hasClass('required-field') ) {
@@ -187,12 +184,12 @@ function buttonEnable() {
 }
 
 // CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
-$('#gform_submit_button_1').click(function() {
-  document.getElementById('gform_submit_button_1').value = buttonSendingText;
-});
+// $(buttonIdDom).click(function() {
+//   document.getElementById('gform_submit_button_1').value = buttonSendingText;
+// });
 
 // CHANGE BACK ON BLUR
-$('#gform_submit_button_1').blur(function() {
+$('[id*="gform_submit_button"]').blur(function() {
   document.getElementById('gform_submit_button_1').value = buttonTextCache;
 });
 

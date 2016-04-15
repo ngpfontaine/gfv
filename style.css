@@ -1,9 +1,12 @@
-/* CSS FOR INLINE JQUERY VALIDATION FOR G FORMS */
-.form-req input, .form-req textarea, .form-req select {
+/* GFV CSS - REQUIRED FORM FIELD ON PAGE CONFIRMATION */
+/* NGPFONTAINE  20160415 */
+/* NICFONTAINE.COM */
+
+.gfv-req input, .gfv-req textarea, .gfv-req select {
   border: 1px solid #bdbdbd;
 }
 
-.form-req .required-border {
+.gfv-req .required-border {
   border: 1px solid #eaaeae;
   background: #fbf0f0;
 }
@@ -76,7 +79,7 @@ input::-moz-focus-inner {
   100% {border: 1px solid #eaaeae;}
 }
 
-.form-req .required-pulse {
+.gfv-req .required-pulse {
   animation-name: requiredPulse;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
