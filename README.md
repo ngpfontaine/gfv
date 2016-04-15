@@ -29,8 +29,8 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 3. To validate each individual field using logic also add a class from below:  
   
   `name-req`  
+  `question-req`  
   `email-req`  
-  `question-req` 
   
     **Example**: *First-Name* field will have `form-req name-req` in the **Custom CSS Class** option.
   
@@ -39,9 +39,9 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 ---
   
 ### Note
-- `#form-button-cover` covers and disables Gravity Forms' button. You will need to edit it's css to fit with the page.
   
 - GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
+- Gravity forms ID's are used for targeting; at the moment this will only act on form #1. Need to code for all.
   
 ### Options
 You can customize some string vars that display to the user. They're at the top of `script.js`, you can guess by their names:
@@ -51,8 +51,7 @@ var validationErrorText = 'Please complete all required fields';
 ```
 
 ### To-Do
-1. At the moment GFV targets forms with ID 1. Need to check for any ID #.
-2. 'Cover button' div and 'validation text' div are added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
+2. 'validation text' div is added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
 3. Add support for other inputs like **number** , **checkbox**, as well as **select**
 
 ### More
