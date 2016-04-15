@@ -8,7 +8,7 @@ var validationErrorText = 'Please complete all required fields';
 
 /* ---- */
 
-var formAfterContent = '<div id="form-confirmation"></div>';
+var formAfterContent = '<div id="gfv-error-text"></div>';
 var completeIcon = '<i class="fa fa-check"></i>';
 var completeSpinner = '<i class="fa fa-spinner"></i>';
 var sendEnabled = false;
@@ -28,7 +28,7 @@ var fieldNameReq = '.gfv-name';
 var gFormButtonDom = $('[id*="gform_submit_button"]');
 var buttonTextCache = $(gFormButtonDom).val();
 
-// ADD CONFIRMATION DIV AFTER ANY GRAVITY FORMS WRAPPER
+// ADD ERROR DIV AFTER ANY GRAVITY FORMS WRAPPER
 $(formAfterContent).insertAfter($('[id*="gform_wrapper"]'));
 
 $(fieldReqAll).addClass('required-field');
@@ -70,7 +70,7 @@ $(fieldReqAll).on('keyup keydown input change', function() {
       }
 
       $(this).parent().addClass('completed-field');
-      document.getElementById('form-confirmation').innerHTML = '';
+      document.getElementById('gfv-error-text').innerHTML = '';
       buttonEnable();
     } else {
       $(this).addClass('required-field required-focus');
@@ -155,7 +155,7 @@ $(gFormButtonDom).on('click', function(e) {
 
 	if (!sendEnabled && $(fieldReqAll).hasClass('required-field')) {
   	e.preventDefault();
-	  document.getElementById('form-confirmation').innerHTML = validationErrorText;
+	  document.getElementById('gfv-error-text').innerHTML = validationErrorText;
 
     $('.required-field').addClass('required-border required-pulse');
 
@@ -179,7 +179,7 @@ function buttonEnable() {
   if ( !$(fieldReqAll).hasClass('required-field') ) {
     sendEnabled = true;
     // $(coverButton).hide();
-    document.getElementById('form-confirmation').innerHTML = "";
+    document.getElementById('gfv-error-text').innerHTML = "";
   }
 }
 
