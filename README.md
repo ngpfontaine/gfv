@@ -38,16 +38,18 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   
 ---
   
-### Note
-  
-- GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
-  
 ### Options
-You can customize some string vars that display to the user. They're at the top of `script.js`, you can guess by their names:
+- You can customize some string vars that display to the user. They're at the top of `script.js`, you can guess by their names:
 ```javascript
 var buttonSendingText = 'Sending...';  
 var validationErrorText = 'Please complete all required fields';
 ```
+  
+- You might want to change the error text style. This is at the top of the CSS - `#gfv-error-text`
+  
+### Note
+  
+- GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
 
 ### To-Do
 1. Add support for other inputs like **number** , **checkbox**, as well as **select**
