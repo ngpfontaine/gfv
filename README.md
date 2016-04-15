@@ -24,15 +24,15 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 ### Usage
 1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
   
-2. Each field you want GFV to validate needs `form-req` in the **Custom CSS Class** field under the **Appearance** tab.
+2. Each field you want GFV to validate needs `gfv-req` in the **Custom CSS Class** field under the **Appearance** tab.
   
 3. To validate each individual field using logic also add a class from below:  
   
-  `name-req`  
-  `question-req`  
-  `email-req`  
+  `gfv-name`  
+  `gfv-question`  
+  `gfv-email`  
   
-    **Example**: *First-Name* field will have `form-req name-req` in the **Custom CSS Class** option.
+    **Example**: *First-Name* field will have `gfv-req gfv-name` in the **Custom CSS Class** option.
   
 4. Save, and add form to page.
   
@@ -41,7 +41,6 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 ### Note
   
 - GFV won't act if you don't have the classes added to the form fields. No need to remove the script if you don't want it to do anything.
-- Gravity forms ID's are used for targeting; at the moment this will only act on form #1. Need to code for all.
   
 ### Options
 You can customize some string vars that display to the user. They're at the top of `script.js`, you can guess by their names:
@@ -51,8 +50,7 @@ var validationErrorText = 'Please complete all required fields';
 ```
 
 ### To-Do
-2. 'validation text' div is added after `#gform_wrapper_1` which will act on all Gravity forms at the moment. Need if statement somewhere in case you don't want to use GFV.
-3. Add support for other inputs like **number** , **checkbox**, as well as **select**
+1. Add support for other inputs like **number** , **checkbox**, as well as **select**
 
 ### More
 Check out my website at [nicfontaine.com](https://nicfontaine.com)  
