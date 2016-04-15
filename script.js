@@ -74,10 +74,11 @@ $(fieldReqAll).on('keyup keydown input change', function() {
       buttonEnable();
     } else {
       $(this).addClass('required-field required-focus');
-      // $(coverButton).show();
       // REMOVE COMPLETE CHECK
       $(this).parent().removeClass('completed-field');
       $(this).siblings('i').remove();
+      // (NOTE) I THINK THIS SHOULD GO HERE?
+      sendEnabled = false;
     }
   }
 
@@ -87,11 +88,8 @@ $(fieldReqAll).on('keyup keydown input change', function() {
 $(fieldReqAll).on('keyup change', function() {
   if ( $(this).val().length === 0 && $(this).is(":focus")) {
     $(this).addClass('required-field required-focus');
-
     $(this).removeClass('required-focus');
-
     $(this).parent().removeClass('completed-field');
-    // $(coverButton).show();
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
@@ -104,7 +102,6 @@ $(fieldReqAll).on('blur', function() {
   if ( $(this).val().length === 0) {
     $(this).addClass('required-field required-border');
     $(this).parent().removeClass('completed-field');
-    // $(coverButton).show();
     // REMOVE COMPLETE CHECK
     $(this).siblings('i').remove();
     $(this).parent().removeClass('checked-field');
@@ -140,16 +137,6 @@ function isValidEmailAddress(emailAddress) {
   return pattern.test(emailAddress);
 };
 
-// ON BUTTON COVER CLICK, DISPLAY ERROR
-// $(coverButton).click(function() {
-//   document.getElementById('form-confirmation').innerHTML = validationErrorText;
-//   // ADD RED BORDER TO BLANK FIELDS
-//   $('.required-field').addClass('required-border required-pulse');
-//   var timerPulse = setTimeout(function() {
-//     $('.required-field').removeClass('required-pulse');
-//   }, 300);
-// });
-
 // DISABLE/ENABLE BUTTON SUBMIT
 $(gFormButtonDom).on('click', function(e) {
 
@@ -166,7 +153,7 @@ $(gFormButtonDom).on('click', function(e) {
 	else {
 	  document.getElementById('gform_1').submit();
 		// CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
-    gFormButtonDom.value = buttonSendingText;
+    $(gFormButtonDom).val(buttonSendingText);
 	}
 
 });
@@ -178,15 +165,9 @@ function buttonEnable() {
   // ONLY IF FIELDS ARE VALIDATED
   if ( !$(fieldReqAll).hasClass('required-field') ) {
     sendEnabled = true;
-    // $(coverButton).hide();
     document.getElementById('gfv-error-text').innerHTML = "";
   }
 }
-
-// CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
-// $(buttonIdDom).click(function() {
-//   document.getElementById('gform_submit_button_1').value = buttonSendingText;
-// });
 
 // CHANGE BACK ON BLUR
 $(gFormButtonDom).blur(function() {
