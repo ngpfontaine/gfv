@@ -16,7 +16,7 @@ var sendEnabled = false;
 // CLASS NAME FOR ALL REQUIRED FORM <li> ELEMENTS
 var liReq = '.gfv-req';
 // FIELD UNDER REQUIRED UNDER <li>
-var fieldReqAll = '.gfv-req input';
+var fieldReqAll = '.gfv-req input, gfv-req textarea';
 // CLASS NAMES FOR EACH REQUIRED FIELD
 var fieldQuestionReq = '.gfv-question';
 var fieldEmailReq = '.gfv-email';
