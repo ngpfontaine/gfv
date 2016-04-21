@@ -155,7 +155,8 @@ $(gFormButtonDom).on('click', function(e) {
     }, 300);
 	}
 	else {
-	  document.getElementById('gform_1').submit();
+	  // document.getElementById('gform_1').submit();
+    $('[id*="gform_wrapper"] form').submit();
 		// CHANGE BUTTON TEXT ON CLICK TO "SENDING..."
     $(gFormButtonDom).val(buttonSendingText);
 	}
