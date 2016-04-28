@@ -22,7 +22,7 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 2. Copy `style.css` contents into your CSS file or plugin.
 
 ### Usage
-1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
+1. Create form fields as either **Single-Line Text**, **Paragraph Text**, or **Drop Down**.
   
 2. Each field you want GFV to validate needs `gfv-req` in the **Custom CSS Class** field under the **Appearance** tab.
   
