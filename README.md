@@ -2,7 +2,7 @@
 # Gravity Forms Validation 
   
     
-On form submit the page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI. Currently supports **single-line**, **paragraph**, and **email** fields only.
+On form submit the page reload is ugly, slow by nature, and confusing on mobile. This is my solution to make submissions simpler for the user while offering assitive UI. Currently supports **single-line**, **paragraph**, **drop-down**, and **email** fields only. (Note) first **drop-down** select needs to be blank so field isn't filled by default.
   
 >*I use this all the time at work and thought I'd put it up in case anyone else wants to implement it or just mess around.*
   
@@ -28,11 +28,11 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   
 3. To validate each individual field using logic also add a class from below:  
   
-  `gfv-name`  
-  `gfv-question`  
-  `gfv-email`  
+  `gfv-field` - checks if blank, works on input, textarea, select (if first option is blank by default)
+  `gfv-email` - runs regex to validate
+#  `gfv-phone` - runs google regex for numbers including international.
   
-    **Example**: *First-Name* field will have `gfv-req gfv-name` in the **Custom CSS Class** option.
+    **Example**: *First-Name* field will have `gfv-req gfv-field` in the **Custom CSS Class** option.
   
 4. Save, and add form to page.
   
