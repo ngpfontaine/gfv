@@ -31,7 +31,7 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   `gfv-field` - checks if blank, works on input, textarea, select (if first option is blank by default)  
   `gfv-email` - runs regex to validate  
   
-    **Example**: *First-Name* field will have `gfv-req gfv-field` in the **Custom CSS Class** option.
+    **Example**: *First-Name* field will have `gfv-req gfv-field` in the **Custom CSS Class** option (notice no commas or periods).
   
 4. Save, and add form to page.
   
