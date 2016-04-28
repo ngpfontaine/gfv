@@ -18,8 +18,8 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
 2. [Font Awesome Icons](http://fontawesome.io/get-started/).
 
 ### Installation
-1. Copy `script.js` contents into your `footer.php` after `</body>`.
-2. Copy `style.css` contents into your css file or plugin.
+1. Copy `script.js` contents into `script` tag in `footer.php` or JS plugin.
+2. Copy `style.css` contents into your CSS file or plugin.
 
 ### Usage
 1. Create form fields as either **Single-Line Text** or **Paragraph Text**.
