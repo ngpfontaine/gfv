@@ -28,8 +28,8 @@ On form submit the page reload is ugly, slow by nature, and confusing on mobile.
   
 3. To validate each individual field using logic also add a class from below:  
   
-  `gfv-field` - checks if blank, works on input, textarea, select (if first option is blank by default)
-  `gfv-email` - runs regex to validate
+  `gfv-field` - checks if blank, works on input, textarea, select (if first option is blank by default)  
+  `gfv-email` - runs regex to validate  
   
     **Example**: *First-Name* field will have `gfv-req gfv-field` in the **Custom CSS Class** option.
   
